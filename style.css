@@ -1,0 +1,406 @@
+
+/* Basic Settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0b1020;
+    color: white;
+}
+
+/* Navigation Bar */
+header {
+    background: #111a2d;
+    padding: 20px 7%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+}
+
+.logo span,
+.heading span {
+    color: #00bfff;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.navbar ul a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar ul a:hover {
+    color: #00bfff;
+}
+
+/* Home Section */
+.home {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    padding: 50px 10%;
+}
+
+.home-content h3 {
+    font-size: 25px;
+}
+
+.home-content h1 {
+    font-size: 55px;
+    color: #00bfff;
+    margin: 10px 0;
+}
+
+.home-content h2 {
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.home-content p {
+    color: #c5cbd8;
+    max-width: 550px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background: #00bfff;
+    color: #07101d;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Common Sections */
+.section {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.heading {
+    font-size: 35px;
+    margin-bottom: 35px;
+}
+
+.section > p {
+    color: #c5cbd8;
+    line-height: 1.9;
+    max-width: 750px;
+    margin: auto;
+}
+
+/* Cards */
+.card {
+    background: #17243b;
+    padding: 25px;
+    margin: 15px auto;
+    max-width: 600px;
+    border-radius: 12px;
+    border: 1px solid #263957;
+}
+
+.card h3 {
+    color: #00bfff;
+    margin-bottom: 10px;
+}
+
+/* Skills */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.skills-container .card {
+    width: 100%;
+    font-weight: bold;
+}
+
+/* Contact Form */
+form {
+    max-width: 550px;
+    margin: auto;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    background: #17243b;
+    color: white;
+    border: 1px solid #263957;
+    border-radius: 8px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+form button {
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    background: #111a2d;
+    padding: 25px;
+    text-align: center;
+    color: #c5cbd8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .home-content h1 {
+        font-size: 38px;
+    }
+
+    .home-content h2 {
+        font-size: 18px;
+    }
+
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 450px) {
+
+    .navbar ul {
+        gap: 9px;
+    }
+
+    .navbar ul a {
+        font-size: 13px;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 60px 6%;
+    }
+}
+
+
+
+/* ===== AY PROFESSIONAL AVATAR ===== */
+
+.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    min-height: 90vh;
+    padding: 60px 10%;
+}
+
+.home-content {
+    flex: 1;
+}
+
+.home-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    min-height: 350px;
+}
+
+.image-circle {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(
+        135deg,
+        #00d4ff,
+        #4568dc,
+        #a78bfa
+    );
+
+    border: 8px solid #243650;
+
+    box-shadow:
+        0 0 25px #00bfff,
+        0 0 60px rgba(0,191,255,0.3);
+
+    transition: 0.4s;
+}
+
+.image-circle span {
+    font-size: 90px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    color: white;
+}
+
+.image-circle:hover {
+    transform: scale(1.07);
+}
+
+.floating-text {
+    position: absolute;
+    bottom: 15px;
+    right: 0;
+
+    background: #17243b;
+    color: #00d4ff;
+
+    padding: 12px 18px;
+    border: 1px solid #00bfff;
+    border-radius: 25px;
+
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Social Links */
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.social-links a {
+    color: #00d4ff;
+    text-decoration: none;
+    border: 1px solid #00bfff;
+    padding: 9px 18px;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    background: #00bfff;
+    color: #07101d;
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 768px) {
+
+    .home {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 6%;
+    }
+
+    .home-image {
+        width: 100%;
+        min-height: 300px;
+    }
+
+    .image-circle {
+        width: 220px;
+        height: 220px;
+    }
+
+    .image-circle span {
+        font-size: 70px;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .floating-text {
+        right: 5%;
+    }
+}
+
+
+/* FIX: Keep introduction and AY avatar side by side */
+
+.home {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+
+    min-height: 85vh;
+    padding: 60px 8%;
+}
+
+.home-content {
+    flex: 1 1 55%;
+    min-width: 0;
+}
+
+.home-image {
+    flex: 0 0 40%;
+    min-height: 350px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+
+    .home {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        text-align: center;
+    }
+
+    .home-content {
+        width: 100%;
+    }
+
+    .home-image {
+        width: 100%;
+        flex: none;
+        min-height: 280px;
+    }
+}
